@@ -43,7 +43,7 @@ class EmailVerification extends Notification
      */
     public function toMail($notifiable)
     {
-        return (new MailMessage)->view('email.confirmWorkerRegist')->action('Verify your email', $this->verificationUrl($notifiable));
+        return (new MailMessage)->view('email.confirmWorkerRegist')->action('Verify your email', $this->verificationUrl($notifiable))->subject("Register Confirmation");
     }
 
     /**
